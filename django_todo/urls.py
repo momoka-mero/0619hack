@@ -24,3 +24,5 @@ urlpatterns = [
     path('accounts/login/', base.RedirectView.as_view(pattern_name="todo:login")),
     path('accounts/profile/', base.RedirectView.as_view(pattern_name="todo:index")),
 ]
+# if settings.DEBUG:
+#     urlpatterns += static(settings.IMAGE_URL, document_root=settings.IMAGE_ROOT)

@@ -3,7 +3,9 @@
 {% block content %}
 <main class="form-signin">
   <form>
-    <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
+    <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+    <!-- <img class="mb-4" src="../pictures/takarabako.png" alt="" width="72" height="57"> -->
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
     
     <label for="inputUsername" class="visually-hidden">Username</label>

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-from .models import Folder,Task
+from .models import Folder,Task, Image
 from .forms import *
 
 def index(request, id):
@@ -70,8 +70,9 @@ def signin(request):
             return redirect(to='users/signin')
     else:
         form = SignUpForm()
-
-    return render(request, 'signin.html', {'form': form})
+        images = Image.objects.all()
+        image = images[0]
+    return render(request, 'signin.html', {'form': form,'image':image})
 
 
 
