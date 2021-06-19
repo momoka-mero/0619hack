@@ -2,6 +2,13 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
+class Image(models.Model):
+    picture = models.ImageField(upload_to='images/')
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
+
 class Folder(models.Model):
     now_date = timezone.localtime(timezone.now())
     title = models.CharField(max_length=20)
