@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth.models import User
 from .models import Folder,Task
 
 class FolderForm(forms.ModelForm):
@@ -31,3 +32,12 @@ class TaskForm(forms.ModelForm):
             'status': '状態',
             'due_date': '期限',
         }
+
+
+class SignUpForm(forms.Form):
+    username = forms.CharField(widget=forms.TextInput)
+    email = forms.CharField(widget=forms.TextInput)
+    password = forms.CharField(widget=forms.PasswordInput)
+   
+   
+

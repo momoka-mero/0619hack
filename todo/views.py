@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 from .models import Folder,Task
-from .forms import FolderForm, TaskForm
+from .forms import *
 
 def index(request, id):
     folders = Folder.objects.filter(created_at__lte=timezone.now()).order_by('created_at')
@@ -57,5 +58,21 @@ def edit_task(request, id, task_id):
     else:
         form = TaskForm(instance=task)
     return render(request, 'edit.html', {'form': form}, {'task':task})
+
+
+
+def signin(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect(to='users/signin')
+    else:
+        form = SignUpForm()
+
+    return render(request, 'signin.html', {'form': form})
+
+
 
 # Create your views here.
