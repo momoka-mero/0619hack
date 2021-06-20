@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 class Folder(models.Model):
     now_date = timezone.localtime(timezone.now())
@@ -23,8 +24,16 @@ class Task(models.Model):
         self.update_at = timezone.now()
         self.save()
 
+    def __str__(self):
+        return self.title
 
+
+class Account(models.Model):
+
+    #ユーザー認証のインスタンス(1vs1関係)
+    #ユーザー名、パスワード、メールアドレス
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 
     def __str__(self):
-        return self.title
+        return self.user.username
