@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/signin.css' %}">
+<link rel="stylesheet" href="{% static 'css/style_signin.css' %}">
+{% endblock %}
 {% block content %}
-<img src='{{ MEDIA_URL }}{{image.picture}}' width=400 height=280>
+<img src='https://images-ext-1.discordapp.net/external/XPY4ss9kYKzUfSMyOIjvxev_5sMhNcgcBe2evdaAy20/https/www.pakutaso.com/shared/img/thumb/maeda3gou1230101_TP_V.jpg?width=863&height=575' width=400 height=280>
 <main class="form-signin">
   
   <form>

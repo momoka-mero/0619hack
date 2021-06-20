@@ -8,7 +8,7 @@ from django.contrib.auth.views import (
     LoginView, LogoutView
 )
 from django.views import generic
-from .forms import LoginForm
+# from .forms import LoginForm
 
 
 User = get_user_model()
@@ -72,5 +72,18 @@ def feedback(request, id):
     current_task = get_object_or_404(Task, id=id)
 
     return render(request, 'feedback.html', {'id':current_task.id})
+
+def signin(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect(to='users/signin')
+    else:
+        form = SignUpForm()
+        images = Image.objects.all()
+        image = images[0]
+    return render(request, 'signin.html', {'form': form,'image':image})
 
 # Create your views here.
