@@ -3,6 +3,15 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from .models import Folder,Task, Image
 from .forms import *
+from django.contrib.auth import get_user_model
+from django.contrib.auth.views import (
+    LoginView, LogoutView
+)
+from django.views import generic
+from .forms import LoginForm
+
+
+User = get_user_model()
 
 def index(request, id):
     folders = Folder.objects.filter(created_at__lte=timezone.now()).order_by('created_at')
@@ -59,21 +68,9 @@ def edit_task(request, id, task_id):
         form = TaskForm(instance=task)
     return render(request, 'edit.html', {'form': form}, {'task':task})
 
+def feedback(request, id):
+    current_task = get_object_or_404(Task, id=id)
 
-
-def signin(request):
-    if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect(to='users/signin')
-    else:
-        form = SignUpForm()
-        images = Image.objects.all()
-        image = images[0]
-    return render(request, 'signin.html', {'form': form,'image':image})
-
-
+    return render(request, 'feedback.html', {'id':current_task.id})
 
 # Create your views here.

@@ -98,6 +98,13 @@
               {% endfor %}
             </tbody>
           </table>
+          <div class="panel-body">
+            <div class="text-right">
+              <a href="{% url 'tasks.feedback' id=current_folder_id  %}" class="btn btn-default btn-block">
+                フィードバッグ
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
