@@ -1,5 +1,6 @@
 window.onload = function() {
     popupImage();
+    takarabako();
     // var ok = document.getElementById('ok');
     // var mymodal=document.getElementById('mymodal')
     // mymodal.style.opacity=0;
@@ -38,10 +39,3 @@ function popupImage() {
       });
     }
   }
- 
-// let button=document.getElementById("ok");
-// button.innerHTML="button"
-// button.addEventListener("click",function(){
-//     let mymodal=document.getElementbyId("mymodal");
-//     mymodal.opacity=1;
-// })
