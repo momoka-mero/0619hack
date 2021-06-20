@@ -2,6 +2,13 @@
     margin-left:2rem;
     margin-right: 2rem;
 }
+.js-show-popup {
+  color:black;
+  background-color: beige;
+}
+.js-show-popup:hover {
+  background-color: antiquewhite;
+}
 .popup {
     position: fixed;
     left: 0;

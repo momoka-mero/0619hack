@@ -9,32 +9,22 @@
 <div class="donetask">
     <div class="panel panel-success">
         <div class="panel-heading complete">タスクを完了しました！</div>
-        "ここに達成したタスク表示"
-        <div class="panel-body"></div>
+        <div class="panel-body">
+            <p>えらい！！！！！！！！宝箱をあげよう！！！！！</p>
+            <button id="js-show-popup" class="js-show-popup"> 宝箱をひらく </button>
+        </div>
     </div>
 </div>
-<div class="donetask"> 
+<div class="donetask" hidden="true"> 
     <div class="panel panel-warning">
         <div class="panel-heading faild">タスクの期限が切れました</div>
-        "ここに切れたタスク表示?"
         <div class="panel-body">
-            <button id="js-show-popup">確認</button>
+            <p>ざんねん！！！！！！！宝箱をあげよう！！！！！</p>
+            <button id="js-show-popup" class="js-show-popup"> 宝箱をひらく </button>
         </div>
     </div>
 </div>
 
-<!-- <div class="popup" id ="js-popup">
-    aaa
-    <div class="poupu-inner">
-        <div class="close-btn" id="js-close-btn">X</div>
-        <img id="chance"src='https://2.bp.blogspot.com/-VnbIXVe2zoc/VlAZcj--mVI/AAAAAAAA06k/sEBRIoI0iGQ/s450/text_chance.png' width=180 height=100>
-        <p>宝箱を選んでね！</p>
-        <img src='https://3.bp.blogspot.com/-ddxthgZW4kI/V2ub9fWGyTI/AAAAAAAA7to/gTB-dajOTbQWLfgw0Le-qDZ6x-OpezTAQCLcB/s400/kaizoku_takarabako.png' width=200>
-        <img src='https://3.bp.blogspot.com/-ddxthgZW4kI/V2ub9fWGyTI/AAAAAAAA7to/gTB-dajOTbQWLfgw0Le-qDZ6x-OpezTAQCLcB/s400/kaizoku_takarabako.png' width=200>
-        <img src='https://3.bp.blogspot.com/-ddxthgZW4kI/V2ub9fWGyTI/AAAAAAAA7to/gTB-dajOTbQWLfgw0Le-qDZ6x-OpezTAQCLcB/s400/kaizoku_takarabako.png' width=200>
-    </div>
-    <div class="black-background" id="js-black-bg"></div>
-</div> -->
 <div class="popup" id="js-popup">
     <div class="popup-inner">
       <div class="close-btn" id="js-close-btn">ｘ</div>
@@ -48,7 +38,6 @@
     </div>
     <div class="black-background" id="js-black-bg"></div>
   </div>
-  <!-- <button id="js-show-popup">Show Popup</button> -->
 {% endblock %}
 
 {% block scripts %}
