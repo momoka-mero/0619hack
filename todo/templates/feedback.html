@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+    <div class="column col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">タスクを完了しました！</div>
+            "ここに達成したタスク表示"
+            <div class="panel-body"></div>
+        </div>
+    </div>
+    <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+        <div class="col-lg-4">
+            <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
+            <p><a class="btn btn-secondary" href="#" role="button">開く &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
+            <p><a class="btn btn-secondary" href="#" role="button">開く &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
+            <p><a class="btn btn-secondary" href="#" role="button">開く &raquo;</a></p>
+        </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+
+</main>
+{% endblock %}

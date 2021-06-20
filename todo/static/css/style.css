@@ -1,14 +1,14 @@
 body {
-    background-color: #b4e7cf;
+    background-color: #ffffff;  
   }
 
   .navbar {
-    margin: 2rem 0 2.5rem 0;
+    margin: 2r 0 2.5rem 0;
   }
 
   .my-navbar {
     align-items: center;
-    background: #474a2c;
+    background: hsl(12, 89%, 36%);  /*  ヘッダー背景色 */
     display: flex;
     height: 6rem;
     justify-content: space-between;
@@ -22,7 +22,8 @@ body {
 
   .my-navbar-brand,
   .my-navbar-item {
-    color: #b4e7cf;
+    color: #f5f5f5;/* Todo */
+    font-size:  30px; 
   }
 
   .my-navbar-brand:hover,
@@ -30,50 +31,57 @@ body {
     color: #ffffff;
   }
 
+.author{
+color:rgb(145, 143, 143);
+font-size:25px;
+padding-top: 10px;
+}
+
   .panel-default>.panel-heading {
-    color: #474a2c;
-    background-color: #9bdeac;
-    border-color: #e6e9ed;
+    color: #cecece;
+    background-color:hsl(12, 86%, 44%) ;
+    border-color: #e6e9ed;/* フォルダ*/
 }
 
 a.list-group-item:hover {
-  color: #fff;
-  background-color: #474a;
+  color: hsl(0, 0%, 6%);
+  background-color: rgba(247, 244, 244, 0.667);/* リストホバー */
 }
 
 a.list-group-item.active,
 a.list-group-item.active:focus,
 a.list-group-item.active:hover{
-  color: #fff;
-  background-color: #474a;
-  border-color: #e6e9ed;
+  color: hsl(12, 86%, 44%);
+  background-color: hsla(0, 9%, 96%, 0.904);/* 選択されたフォルダ */
+  border-color: hsla(22, 100%, 50%, 0.904);
 }
 
 a {
-  color: #474a;
+  color: rgba(67, 68, 67, 0.667);  /* 編集ボタン */
   text-decoration: none;
 }
 
 a:hover{
-  color: #4909;
+  color: rgba(29, 28, 28, 0.6);/* 編集ボタンのホバー */
 }
 
 .btn-default:hover {
   color: #fff;
-  background-color: #474a;
+  background-color: rgba(238, 69, 2, 0.801);/* 追加ボタン */
 }
 
 .btn{
-  border-color: #474a;
+  border-color: rgba(177, 177, 177, 0.667);
 }
 
 .btn-primary {
-  background-color: #474a;
-  border-color: #474a;
+  background-color: rgb(4, 7, 161);
+  border-color: rgba(0, 0, 0, 0.667);/* 送信ボタン */
 }
 
 .btn-primary:hover {
-  background-color: #4909;
+  color: rgb(255, 255, 255);
+  background-color:rgba(4, 7, 161, 0.747); 
 }
 
   .table td:nth-child(2),
@@ -87,3 +95,11 @@ a:hover{
   .form-control[readonly] {
     background-color: #fff;
   }
+
+  
+
+
+
+
+
+    
