@@ -1,30 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<img src='{{ MEDIA_URL }}{{image.picture}}' width=400 height=280>
 <main class="form-signin">
+  
   <form>
-    <img src='{{ MEDIA_URL }}{{image.picture}}' width=200>
+    <div class="todo">
+    
     <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
     <!-- <img class="mb-4" src="../pictures/takarabako.png" alt="" width="72" height="57"> -->
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">TODOリスト<h1>
+  </div>
+  <div class="sujest">
+    <h5>ダメだったあなたを変える</h5>
+    <h5>AIフィードバックによるサポート！</h5>
+  </div>
     
-    <label for="inputUsername" class="visually-hidden">Username</label>
+    <label for="inputUsername" class="visually-hidden">ユーザー名</label>
     <input type="username" id="inputUsername" class="form-control" placeholder="user name" required autofocus>
 
-    <label for="inputEmail" class="visually-hidden">Email address</label>
+    <label for="inputEmail" class="visually-hidden">メールアドレス</label>
     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 
-    <label for="inputPassword" class="visually-hidden">Password</label>
+    <label for="inputPassword" class="visually-hidden">パスワード</label>
     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox" value="remember-me"> Remember me
+        <input type="checkbox" value="remember-me"> 
+        次から入力を省略
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">ログイン</button>
     <button class="w-100 btn btn-lg btn-primary" >新規登録</button>
     <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p> -->
   </form>
 </main>
-{% endblock %}
 
+<footer>
+  <div class="footer-list">
+  <ul>
+    <li>運営会社</li> 
+
+    <li>利用規約</li>
+    <li>お問い合わせ</li>
+  </ul>
+</div>
+  <p>(c)howdy.com</p>
+</footer>
+{% endblock %}
